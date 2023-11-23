@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Ticket de Venta</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+        }
+
+        .container {
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 10px;
+        }
+
+        .left-column, .right-column {
+            width: 48%;
+        }
+
+        .logo {
+            width: 100%;
+            text-align: center;
+        }
+
+        img {
+            max-width: 100%;
+            height: auto;
+        }
+
+        hr {
+            border: 1px solid #54ACD2;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-bottom: 10px;
+        }
+
+        table, th, td {
+            border: 1px solid black;
+        }
+
+        th, td {
+            padding: 8px;
+            text-align: left;
+        }
+
+        th {
+            background-color: #54ACD2;
+            color: white;
+        }
+
+        label {
+            font-size: 12px;
+        }
+
+        .subtotal, .total {
+            text-align: right;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <div class="logo">
+        <img src="ruta/a/tu/logo.png" alt="Logo">
+    </div>
+
+    <div class="container">
+        <div class="left-column">
+            <label>@nombrenegocio</label><br />
+            <label>Cuil: @docnegocio</label><br />
+            <label>Dirección: @dirnegocio</label><br />
+            <label>Telefono: @telnegocio</label><br />
+        </div>
+        <div class="right-column">
+            <table>
+                <tr>
+                    <th>@tipodocumento</th>
+                </tr>
+                <tr>
+                    <td>@numerodocumento</td>
+                </tr>
+            </table>
+        </div>
+    </div>
+
+    <hr />
+
+    <label>Documento Cliente: @docCliente</label><br />
+    <label>Nombre Cliente: @nombreCliente</label><br />
+    <label>Apellido Cliente: @apellidoCliente</label><br />
+    <label>Fecha Registro: @fecharegistro</label><br />
+    <label>Usuario Registro: @usuarioregistro</label><br />
+
+    <hr />
+
+    <table>
+        <thead>
+            <tr>
+                <th>Producto</th>
+                <th>Precio</th>
+                <th>Cantidad</th>
+                <th>Sub Total</th>
+            </tr>
+        </thead>
+        <tbody>
+            @filas
+        </tbody>
+    </table>
+
+    <div class="subtotal">
+        <label>Monto Subtotal: @montosubtotal</label>
+    </div>
+
+    <div class="total">
+        <label>Monto Total: @montototal</label>
+    </div>
+</body>
+</html>
